@@ -1,0 +1,5 @@
+#Default setting file, in format [name=value]
+#########################################################
+
+#representation parameters
+solver=DS_GGBX_STD_QT

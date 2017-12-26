@@ -1,0 +1,4 @@
+[SS_DS_LS]
+
+-D R_CS < implement.GCP.behavior.construct.DsaturKConstructor: trialTime=1,tourSize=-1
+-D SS_DS_LS < maosKernel.behavior.scratch.LinkedScratchSearch: scratchSearch=&R_CS,incumbentSearch=%R_LS

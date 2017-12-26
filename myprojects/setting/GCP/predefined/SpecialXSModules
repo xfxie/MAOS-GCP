@@ -1,0 +1,45 @@
+[GGBX_STD]
+
+-D R_GPP < implement.GCP.behavior.combine.MISGroupProcessPolicy
+-D R_GGP < implement.GCP.behavior.combine.AlternateGreedyGroupPickingPolicy
+-D R_GVR < implement.GCP.behavior.combine.RandomKeepingVerticesRemovingPolicy
+-D R_VA < implement.GCP.behavior.combine.MinConflictsVerticesAssigningPolicy
+
+-D GGBX_STD < implement.GCP.behavior.combine.GGBXSearch: groupProcess=&R_GPP, groupPicking=&R_GGP, verticesRemoving=&R_GVR, verticesAssigning=&R_VA
+
+[GGBX_GPP.E]
+
+-D R_GPP < implement.GCP.behavior.combine.NullGroupProcessPolicy
+-D R_GGP < implement.GCP.behavior.combine.AlternateGreedyGroupPickingPolicy
+-D R_GVR < implement.GCP.behavior.combine.RandomKeepingVerticesRemovingPolicy
+-D R_VA < implement.GCP.behavior.combine.MinConflictsVerticesAssigningPolicy
+
+-D GGBX_STD < implement.GCP.behavior.combine.GGBXSearch: groupProcess=&R_GPP, groupPicking=&R_GGP, verticesRemoving=&R_GVR, verticesAssigning=&R_VA
+
+[GGBX_GPP.IS]
+
+-D R_GPP < implement.GCP.behavior.combine.ISGroupProcessPolicy
+-D R_GGP < implement.GCP.behavior.combine.AlternateGreedyGroupPickingPolicy
+-D R_GVR < implement.GCP.behavior.combine.RandomKeepingVerticesRemovingPolicy
+-D R_VA < implement.GCP.behavior.combine.MinConflictsVerticesAssigningPolicy
+
+-D GGBX_STD < implement.GCP.behavior.combine.GGBXSearch: groupProcess=&R_GPP, groupPicking=&R_GGP, verticesRemoving=&R_GVR, verticesAssigning=&R_VA
+
+[GGBX_GVR.KF]
+
+-D R_GPP < implement.GCP.behavior.combine.MISGroupProcessPolicy
+-D R_GGP < implement.GCP.behavior.combine.AlternateGreedyGroupPickingPolicy
+-D R_GVR < implement.GCP.behavior.combine.FirstKeepingVerticesRemovingPolicy
+-D R_VA < implement.GCP.behavior.combine.MinConflictsVerticesAssigningPolicy
+
+-D GGBX_STD < implement.GCP.behavior.combine.GGBXSearch: groupProcess=&R_GPP, groupPicking=&R_GGP, verticesRemoving=&R_GVR, verticesAssigning=&R_VA
+
+[GGBX_GPX]
+# Greedy Partition Crossover (GPX)
+
+-D R_GPP < implement.GCP.behavior.combine.NullGroupProcessPolicy
+-D R_GGP < implement.GCP.behavior.combine.AlternateGreedyGroupPickingPolicy
+-D R_GVR < implement.GCP.behavior.combine.FirstKeepingVerticesRemovingPolicy
+-D R_VA < implement.GCP.behavior.combine.RandomVerticesAssigningPolicy
+
+-D GGBX_STD < implement.GCP.behavior.combine.GGBXSearch: groupProcess=&R_GPP, groupPicking=&R_GGP, verticesRemoving=&R_GVR, verticesAssigning=&R_VA

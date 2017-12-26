@@ -1,0 +1,17 @@
+-P LI < R_LS: LI
+
+-L R_NODE < LS_NODE_QT@SpecialLSNModules
+-L R_LS < MLS_MFS_Imp@KernelMLSModules: R_NODE=&R_NODE, LI=50
+
+-L R_INI < SS_DS_LS@SpecialSSModules: R_LS=&R_LS
+
+-L R_T < RT_DIRECT@KernelRTModules
+
+-D R_GPP < implement.GCP.behavior.combine.GGPX.MISGroupProcessPolicy
+-D R_GGP < implement.GCP.behavior.combine.GGPX.AlternateGreedyGroupPickingPolicy
+-D R_GVR < implement.GCP.behavior.combine.GGPX.RandomKeepingVerticesRemovingPolicy
+-D R_VA < implement.GCP.behavior.combine.GGPX.MinConflictsVerticesAssigningPolicy
+
+-D R_XS < implement.GCP.behavior.combine.GGPX.GGBXSearch: groupProcess=&R_GPP, groupPicking=&R_GGP, verticesRemoving=&R_GVR, verticesAssigning=&R_VA
+
+-L R_G < RG_RSP_FS@KernelRGModules: R_XS=&R_XS, R_LS=&R_LS
